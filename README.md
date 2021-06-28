@@ -9,3 +9,14 @@ jet streamm
 3. npm install
 
 4. npm run dev
+
+5. enabled features in jetstream
+   //config/jetstream.php
+        Features::termsAndPrivacyPolicy(),
+        Features::profilePhotos(),
+        Features::api(),
+
+6. enable fortify features too if needed
+    //config/fortify.php
+        // Features::emailVerification(),
+
