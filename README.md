@@ -1,4 +1,3 @@
-
 jet streamm
 ============
 
@@ -20,3 +19,4 @@ jet streamm
     //config/fortify.php
         // Features::emailVerification(),
 
+7. php artisan vendor:publish --tag=jetstream-views
