@@ -1,4 +1,4 @@
-jet streamm
+JetStream , Fortify , Livewire with L8 
 ============
 
 1. composer require laravel/jetstream
@@ -40,3 +40,7 @@ jet streamm
 
     app\Providers\FortifyServiceProvider.php -> register method   Fortify::ignoreRoutes(); 
     add protected function configureRoutes()
+
+11. Customizing The Authentication Pipeline
+    #https://jetstream.laravel.com/2.x/features/authentication.html#customizing-user-authentication
+    
