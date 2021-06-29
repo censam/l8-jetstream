@@ -20,3 +20,13 @@ jet streamm
         // Features::emailVerification(),
 
 7. php artisan vendor:publish --tag=jetstream-views
+
+8. php artisan vendor:publish --tag=jetstream-routes
+
+9.  Override relevant vendor routes in  
+    vendor\laravel\jetstream\routes\livewire.php --or-- vendor\laravel\jetstream\routes\inertia.php
+    to-------->
+    to check that files configurations
+    vendor\laravel\jetstream\src\JetstreamServiceProvider.php -> configureRoutes() method
+    
+    \app\Providers\JetstreamServiceProvider.php -> boot method  JetStream::ignoreRoutes();
