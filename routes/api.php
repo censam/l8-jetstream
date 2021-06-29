@@ -17,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::middleware('auth:sanctum')->get('/user_check', function (Request $request) {
+    if(request()->user()->tokenCan('post:delete')){
+        echo "This user Can Delete Post";
+        //return $request->user();
+    }else{
+        echo "This user <b>Cannot</b> Delete Post";
+        abort(401);
+
+    }
+});

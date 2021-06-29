@@ -46,3 +46,4 @@ JetStream , Fortify , Livewire with L8
     
 12. Addeded middleware with authpipeline - check commit
 
+13. GYA6OqC7wxGfKuWZTymwSuhHFio2gor57GxfACsP
