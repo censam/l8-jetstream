@@ -42,5 +42,7 @@ JetStream , Fortify , Livewire with L8
     add protected function configureRoutes()
 
 11. Customizing The Authentication Pipeline
-    #https://jetstream.laravel.com/2.x/features/authentication.html#customizing-user-authentication
+    #https://jetstream.laravel.com/2.x/features/authentication.html#customizing-user-
     
+12. Addeded middleware with authpipeline - check commit
+
