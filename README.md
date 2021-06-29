@@ -23,10 +23,20 @@ jet streamm
 
 8. php artisan vendor:publish --tag=jetstream-routes
 
-9.  Override relevant vendor routes in  
+9.  Override relevant vendor routes in  "jetstream"
     vendor\laravel\jetstream\routes\livewire.php --or-- vendor\laravel\jetstream\routes\inertia.php
     to-------->
     to check that files configurations
     vendor\laravel\jetstream\src\JetstreamServiceProvider.php -> configureRoutes() method
 
     \app\Providers\JetstreamServiceProvider.php -> register method  JetStream::ignoreRoutes();
+    add protected function configureRoutes()
+
+10. Override relevant vendor routes in  "fortify"
+    vendor\laravel\fortify\routes\routes.php
+    to-------->
+    to check that files configurations
+    vendor\laravel\fortify\src\FortifyServiceProvider.php -> configureRoutes() method
+
+    app\Providers\FortifyServiceProvider.php -> register method   Fortify::ignoreRoutes(); 
+    add protected function configureRoutes()

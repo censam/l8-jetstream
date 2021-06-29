@@ -3,6 +3,7 @@
 namespace App\Actions\Jetstream;
 
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Jetstream\Contracts\AddsTeamMembers;
 use Laravel\Jetstream\Events\AddingTeamMember;
@@ -23,6 +24,7 @@ class AddTeamMember implements AddsTeamMembers
      */
     public function add($user, $team, string $email, string $role = null)
     {
+
         Gate::forUser($user)->authorize('addTeamMember', $team);
 
         $this->validate($team, $email, $role);
@@ -34,6 +36,8 @@ class AddTeamMember implements AddsTeamMembers
         $team->users()->attach(
             $newTeamMember, ['role' => $role]
         );
+
+        Log::info($user->name." Added ".$newTeamMember->name. ' to a team '.$team->name);
 
         TeamMemberAdded::dispatch($team, $newTeamMember);
     }
