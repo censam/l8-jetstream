@@ -9,6 +9,7 @@ use App\Actions\Jetstream\DeleteUser;
 use App\Actions\Jetstream\InviteTeamMember;
 use App\Actions\Jetstream\RemoveTeamMember;
 use App\Actions\Jetstream\UpdateTeamName;
+use App\Http\Middleware\LogLogin;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Jetstream\Jetstream;
@@ -56,6 +57,7 @@ class JetstreamServiceProvider extends ServiceProvider
                     RedirectIfTwoFactorAuthenticatable::class,
                     AttemptToAuthenticate::class,
                     PrepareAuthenticatedSession::class,
+                    LogLogin::class,
             ]);
         });
     }
