@@ -28,5 +28,5 @@ jet streamm
     to-------->
     to check that files configurations
     vendor\laravel\jetstream\src\JetstreamServiceProvider.php -> configureRoutes() method
-    
-    \app\Providers\JetstreamServiceProvider.php -> boot method  JetStream::ignoreRoutes();
+
+    \app\Providers\JetstreamServiceProvider.php -> register method  JetStream::ignoreRoutes();
